@@ -1,17 +1,25 @@
 # VRSOperatorFlags
-### Operator Flags for Virtual Radar Server
+## Operator Flags for Virtual Radar Server
 
-Download [OperatorFlags.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlags.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. Approx 4220 (85x20 px) operator flags. All Flags are listed in [OperatorFlagsList.txt](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlagsList.txt). Newst at the top. 
+Download [OperatorFlags.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlags.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. 
+
+Approx **4220** (85x20 px) operator flags. 
+
+All Flags are listed in [OperatorFlagsList.txt](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlagsList.txt). Newst at the top. 
 
 
-## Name format
-#### ICAO Coded Airline
+### Name format
+#### ICAO Coded Airline / Military
 
-ICAO Airline Code - ICAO Type Code (+/- reg) {for special colours / specific airframes}
+[ICAO Airline Code] - [ICAO Type Code][+/- reg for special colours / specific airframes]
 
-e.g. Ryanair B737-800 -> RYR-B738
+e.g. 
 
-## Examples of the latest updated operator flags:
+1. Ryanair B737-800 -> RYR-B738
+     
+2. United States Air Force C5 -> RCH-C5M
+
+### Examples of the latest updated operator flags:
 
 AstonJet C510 F-HEND 
 ![alt text](https://github.com/rikgale/VRSOperatorFlags/blob/main/Latest/Fleet/ASJ-C510F-HEND.bmp "F-HEND")
