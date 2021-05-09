@@ -1,7 +1,12 @@
 # VRSOperatorFlags
+
+Replacement / additional operator flags for a Virtual Radar Server or Basestation installation. Side views of aircraft with the airlines/operators logo on. Where able, individual paint schemes are used to maximise the amount of detail available. 
+
+Please post requests/alterations as issues on this GitHub repo or leave a post on my thread at [RadarSpotting.com](https://radarspotting.com/forum/index.php/topic,11887.0.html) forum. 
+
 ## Operator Flags for Virtual Radar Server
 
-Download [OperatorFlags.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlags.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. 
+Download [OperatorFlags.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlags.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. Overwrite/replace images when asked to ensure that you have the most up-to-date versions.
 
 Approx **4220** (85x20 px) operator flags. 
 
@@ -41,7 +46,7 @@ AstonJet C68A F-HSFJ
 
 ## General Aviation Operator Flags for Virtual Radar Server
 
-Download [GeneralAviation.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/GeneralAviation.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. 
+Download [GeneralAviation.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/GeneralAviation.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. Overwrite/replace images when asked to ensure that you have the most up-to-date versions.
 
 Approx **400** (85x20 px) UK centric General Aviation operator flags.
 
@@ -69,3 +74,7 @@ Download [Silhouettes.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/
 
 1. Boeing B737 MAX 8 -> B38M
 2. 2020 Windracers Ultra-UAS -> UOSUAV (Custom)
+
+---
+
+Other operator flags for VRS/Basestation from other contributers are also available at [RadarSpotting.com](https://radarspotting.com/forum/index.php?action=forum).
