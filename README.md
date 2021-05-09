@@ -33,17 +33,39 @@ e.g.
 
 + #### NON-ICAO Coded Airline / Military
     [OperatorName(Abbreviated)][ICAO Type Code][+/- registration]
+    
+1. Coca-Cola Company Gulfstream GVII-G600 N886RW -> COKEGLF6N886RW
+2. Exxon Mobil Corp	Gulfstream Aerospace G650 ER N100A -> EXXONGLF6N100A
 
 
-___
 
-### General Aviation Operator Flags for Virtual Radar Server
+## General Aviation Operator Flags for Virtual Radar Server
 
-Download [GeneralAviation.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/GeneralAviation.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. Approx 400 UK centric General Aviation operator flags.
+Download [GeneralAviation.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/GeneralAviation.zip) and extract into the OperatorFlags folder of your Virtual Radar Server installation. 
+
+Approx **400** (85x20 px) UK centric General Aviation operator flags.
+
+All Flags are listed in [GeneralAviationList.txt](https://github.com/rikgale/VRSOperatorFlags/raw/main/GeneralAviationList.txt). Newst at the top.
+
+### *Name format*
+
+[Registration]
+
+1. Cessna U206F Stationair G-AZRZ -> G-AZRZ
+2. Piper PA-32 300 Cherokee Six N2923N -> N2923N
 
 
-___
 
-### Additional and updated silhouettes for Virtual Radar Server
 
-Download [Silhouettes.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/Silhouettes.zip) and extract into the Silhouettes folder of your Virtual Radar Server installation.
+## Additional and updated silhouettes for Virtual Radar Server
+
+Download [Silhouettes.zip](https://github.com/rikgale/VRSOperatorFlags/raw/main/Silhouettes.zip) and extract into the Silhouettes folder of your Virtual Radar Server installation. 
+
+**11** (85x20 px) additional Silhouettes
+
+### *Name format*
+
+[ICAO Type Code] or Custom
+
+1. Boeing B737 MAX 8 -> B38M
+2. 2020 Windracers Ultra-UAS -> UOSUAV (Custom)
