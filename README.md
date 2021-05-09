@@ -22,8 +22,7 @@ AstonJet C68A F-HSFJ
 + #### ICAO Coded Airline / Military
 
     [ICAO Airline Code] - [ICAO Type Code][+/- registration for special colours etc or other indicator e.g. OW = OneWorld]
-
-e.g. 
+    
 
 1. Ryanair B737-800 -> RYR-B738
 2. United States Air Force C5 -> RCH-C5M
@@ -33,7 +32,8 @@ e.g.
 
 + #### NON-ICAO Coded Airline / Military
     [OperatorName(Abbreviated)][ICAO Type Code][+/- registration]
-    
+  
+  
 1. Coca-Cola Company Gulfstream GVII-G600 N886RW -> COKEGLF6N886RW
 2. Exxon Mobil Corp	Gulfstream Aerospace G650 ER N100A -> EXXONGLF6N100A
 
