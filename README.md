@@ -10,7 +10,7 @@ Download [OperatorFlags.zip](https://github.com/rikgale/VRSOperatorFlags/raw/mai
 
 Approx **4220** (85x20 px) operator flags. 
 
-All Flags are listed in [OperatorFlagsList.txt](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlagsList.txt). Newst at the top. 
+All Flags are listed in [OperatorFlagsList.txt](https://github.com/rikgale/VRSOperatorFlags/raw/main/OperatorFlagsList.txt). Newest at the top. 
 
 ### *Examples of the latest updated operator flags:*
 
