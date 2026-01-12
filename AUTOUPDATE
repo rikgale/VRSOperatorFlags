@@ -1,12 +1,76 @@
 #!/usr/bin/env bash
+#
+# ─────────────────────────────────────────────────────────────────────────────
+#  IMPORTANT – ONE-TIME SETUP REQUIRED (PER USER)
+#
+#  Each user that runs this script (manually or via cron) must explicitly
+#  mark the repository directory as trusted, due to Git security protections
+#  introduced in Git 2.35+ ("dubious ownership" checks).
+#
+#  Run ONCE as the user that will execute this script:
+#
+#      git config --global --add safe.directory /path/to/repo
+#
+#  Example:
+#      git config --global --add safe.directory /home/$USER/repo_name
+#
+# ─────────────────────────────────────────────────────────────────────────────
+#
 
-cd $(dirname ${BASH_SOURCE[0]})
+set -e
 
-   git pull
+# Resolve user + home directory safely
+RUN_USER="$(id -un)"
+RUN_HOME="$(getent passwd "$RUN_USER" | cut -d: -f6)"
+: "${RUN_HOME:=$HOME}"
 
-if [[ -n $(git status -s) ]]; then
-    echo "Changes found. Pushing changes..."
-  git add -A && git commit -m 'Updated '$(date +%Y-%m-%d) && git push
+LOGFILE="$RUN_HOME/logs/cron-jobs.log"
+mkdir -p "$(dirname "$LOGFILE")"
+
+# --- TTY-aware logging ---
+if [[ -t 1 ]]; then
+    # Interactive: show output + log
+    exec > >(tee -a "$LOGFILE") 2>&1
 else
-    echo "No changes found. Skip pushing."
+    # Cron: log only
+    exec >>"$LOGFILE" 2>&1
 fi
+
+# Git safety for cron
+export HOME="$RUN_HOME"
+export USER="$RUN_USER"
+export GIT_PAGER=cat
+
+# Get the name of the directory containing the script
+SCRIPT_DIR_NAME="$(basename "$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)")"
+
+# Logging Function
+log() {
+    echo "$SCRIPT_DIR_NAME [$(date '+%Y-%m-%d %H:%M:%S')] [$0] $*"
+}
+
+# Prevent overlapping runs (per user)
+LOCKFILE="/tmp/VRSData-${RUN_USER}.lock"
+exec 9>"$LOCKFILE" || exit 1
+flock -n 9 || exit 0
+
+cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
+
+log "AUTOUPDATE started (user=$RUN_USER)"
+
+git pull --ff-only || {
+    log "ERROR: git pull failed"
+    exit 1
+}
+
+if [[ -n $(git status --porcelain) ]]; then
+    log "Changes found. Committing and pushing..."
+    git add -A
+    git commit -m "Updated $(date +%Y-%m-%d)"
+    git push
+    log "Changes pushed successfully"
+else
+    log "No changes found. Skip pushing."
+fi
+
+log "AUTOUPDATE finished"
